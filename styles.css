@@ -1,1 +1,333 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+}
+h1 {
+    font-weight: 100;
+    width: 100vw;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    font-size: 26px !important; 
+}
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.divider {
+    height: 2px;
+    width: 100vw;
+    background-color: red;
+    margin: 100px 0px 50px 0px;
+
+}
+
+.loader-wrapper {
+    text-align: center;
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 9999999999999999;
+
+}
+
+.loader {
+    border: 5px solid greenyellow;
+    border-top: 5px solid transparent;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s steps(100) infinite;
+    transition: all 2s ease;
+}
+
+.loader-wrapper p {
+    color: white;
+
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        border-width: 5px;
+    }
+
+    25% {
+        transform: rotate(180deg);
+    }
+
+    50% {
+        transform: rotate(300deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-width: 1px;
+    }
+}
+
+.hide-loader {
+    display: none;
+    pointer-events: none;
+    /* Make the loader not clickable or interactive while fading out */
+}
+
+#navbarNav li a {
+    color: white;
+}
+
+#navbar p {
+    font-size: 8px;
+    /* text-transform: uppercase; */
+}
+
+
+
+.background-image {
+    background-image: url('hero_image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 90vh;
+    margin-bottom: 30px;
+}
+
+.content {
+    height: 90vh;
+    padding-top: 20vh;
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#scroll-up {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: bounce 1s infinite;
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+#typingIcon {
+    width: 32px;
+    height: 32px;
+    align-self: flex-end;
+    margin-bottom: -32px;
+    z-index: 10;
+}
+
+#contact-me{
+    margin-bottom: 100px;
+    max-width: 700px;
+}
+
+#contact-me h1{
+    font-size: 20px;
+}
+
+.form-icons-container{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.icons-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    max-width: max-content;
+    color: white; 
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+.icons-container a {
+    text-decoration: none;
+    color: white;
+}
+
+.icons-container i{
+    cursor: pointer;
+}
+
+
+.form-container {
+    flex: 1;
+}
+
+#my-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    max-width: 550px;
+    align-self: center;
+}
+
+.singleSkill {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.434);
+    width: 150px;
+    max-width: 150px;
+    overflow: hidden;
+}
+
+.singleSkill img {
+   height: 100px;
+   width: 100px;
+   object-fit: cover;
+   align-self: center;
+}
+.singleSkill p {
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+
+#my-projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 10px;
+    max-width: 700px;
+    align-self: center;
+}
+
+.singleProject {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.434);
+    width: 200px;
+}
+
+.singleProject img {
+   height: 170px;
+   width: 170px;
+   object-fit: cover;
+   align-self: center;
+}
+.singleProject p {
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+}
+.subtitle {
+    font-weight: lighter !important;
+    font-size: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+.singleProject div {
+   font-family: monospace;
+}
+
+#react-image {
+    animation: spin2 6s linear infinite; 
+    object-fit: contain;
+}
+
+@keyframes spin2 {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-20px);
+    }
+
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+@media screen and (min-width:1000px) {
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #navbarNav {
+        max-width: max-content;
+    }
+
+}
+
+@media screen and (max-width:1000px) {
+    #navbar {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h1 {
+        width: 350px;
+    }
+
+    #navbarNav {
+        max-width: max-content;
+    }
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
