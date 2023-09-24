@@ -82,7 +82,6 @@ main {
 .hide-loader {
     display: none;
     pointer-events: none;
-    /* Make the loader not clickable or interactive while fading out */
 }
 
 #navbarNav li a {
@@ -91,7 +90,6 @@ main {
 
 #navbar p {
     font-size: 8px;
-    /* text-transform: uppercase; */
 }
 
 
